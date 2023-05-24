@@ -1,20 +1,10 @@
-# Your Project Title
+# Social Network API
 
 ## Description 
 
-Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README.md file.
+The Social Network API is a RESTful API that serves as the backend for a social network application. It provides a set of endpoints to manage users, thoughts, reactions, and friendships. 
 
-The quality of a README often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase what your application does, justify the technologies used, and even talk about some of the challenges you faced and features you hope to implement in the future. A good README helps you stand out among the large crowd of developers putting their work on GitHub.
-
-There's no one right way to structure a good README. There is one very wrong way, however, and that is to not include a README at all or to create a very anemic one. This guide outlines a few best practices. As you progress in your career, you will develop your own ideas about what makes a good README.
-
-At a minimum, your project README needs a title and a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") What problem does it solve? What did you learn? What makes your project stand out? 
-
-Lastly, if your project is deployed, include a link to the deployed application here.
-
-If you're new to Markdown, read the GitHub guide on [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
-
-If you need an example of a good README, check out [the VSCode repository](https://github.com/microsoft/vscode).
+The API is built using Node.js, Express.js, and MongoDB, offering a reliable and scalable solution for handling social network functionalities.
 
 
 ## Table of Contents (Optional)
@@ -23,62 +13,88 @@ If your README is very long, add a table of contents to make it easy for users t
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Demo](#demo-video)
+* [Technologies Used](#technologies-used)
 * [Credits](#credits)
 * [License](#license)
 
 
+
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+To set up the Social Network API locally, follow the steps below:
+
+* Clone the repository:
+    
+        git clone https://github.com/Kaidenparcher/Social-Network-API.git
+
+* Install the dependencies:
+
+        cd Social-Network-API
+        npm install
+
+* Set up the seeds by running:
+
+        npm run seed
+
+* Start the server:
+
+        !npm start
+
+
 
 
 ## Usage 
 
-Provide instructions and examples for use. Include screenshots as needed. 
+1. Install and open Insomnia.
+2. Create a new workspace.
+3. Create a new request and set the method, URL, and headers.
+4. Send the request and view the response.
+5. Use the API endpoints to manage users, thoughts, reactions, and friendships.
+6. Set the appropriate method and URL for each operation (e.g., GET, POST, PUT, DELETE).
+7. Provide the necessary request body or parameters.
+8. Send the request and view the response to perform actions such as creating users, retrieving thoughts, adding reactions, etc.
+9. Explore and test different endpoints to utilize the features of the Social-Network-API.
+10. Repeat the process to perform various operations and interact with the API efficiently.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Here is a code snippet of the User Routes to show how the insomina actions should be formatted:
 
-```md
-![alt text](assets/images/screenshot.png)
-```
+![code snippet of userRoutes](./images/user%20routes.png)
 
+Here is a code snippet of the Thoughts model to show how mongoDB syntax works:
+
+![code snippet of thoughts model](./images/ThoughtsModel.png)
+
+## Demo Video
+
+Click on the link below for a demo video:
+
+[https://www.youtube.com/watch?v=qx1YsOXqoJU](https://www.youtube.com/watch?v=qx1YsOXqoJU)
+
+
+## Technologies Used
+
+The Social-Network-API is built using the following technologies:
+
+* Node.js: A JavaScript runtime environment that allows executing JavaScript code on the server-side. It provides an event-driven, non-blocking I/O model for building scalable and high-performance applications.
+
+* Express.js: A web application framework for Node.js that simplifies the process of building robust APIs. It provides features like routing, middleware support, and easy integration with other libraries.
+
+* MongoDB: A popular NoSQL database that provides a flexible and scalable solution for storing and retrieving data. It stores data in a JSON-like format called BSON and offers high performance for read and write operations.
+
+* Mongoose: An Object Data Modeling (ODM) library for Node.js and MongoDB. It provides a convenient way to define data models, perform database operations, and establish relationships between collections.
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+This Project was built by Kaiden Parcher.
+For more information visit my Github [https://github.com/Kaidenparcher](https://github.com/Kaidenparcher)
 
 
 ## License
 
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
----
 
-🏆 The sections listed above are the minimum for a good README, but your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+This application was built using the Open Sourse MIT license. For more information visit [https://opensource.org/license/mit/](https://opensource.org/license/mit/)
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, consider adding a heading called "Features" and listing them there.
-
-## Contributing
-
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
-
----
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
