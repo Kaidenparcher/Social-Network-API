@@ -1,31 +1,25 @@
-const router = require('express').Router();
+const router = require("express").Router();
+
 const {
-  createUser,
+  getUsers,
   getSingleUser,
-  getAllUsers,
+  createUser,
   updateUser,
   deleteUser,
   addFriend,
-  removeFriend,
-} = require('../../controllers/userController');
+  deleteFriend,
+} = require("../../controllers/userController");
 
-// Route: /api/users
-// GET: Get all users
-// POST: Create a new user
-router.route('/').get(getAllUsers).post(createUser);
+// ./api/users
+// Endpoint for getting all users and creating a new user
+router.route("/").get(getUsers).post(createUser);
 
-// Route: /api/users/:userId
-// GET: Get a single user by userId
-// DELETE: Delete a user by userId
-// PUT: Update a user by userId
-router.route('/:userId').get(getSingleUser).delete(deleteUser).put(updateUser);
+// ./api/users/<userid>
+// Endpoint for getting a single user, updating a user, and deleting a user
+router.route("/:userId").get(getSingleUser).put(updateUser).delete(deleteUser);
 
-// Route: /api/users/:userId/friends/:friendId
-// POST: Add a friend to a user by userId and friendId
-router.route('/:userId/friends/:friendId').post(addFriend);
-
-// Route: /api/users/:userId/friends/:friendId
-// DELETE: Remove a friend from a user by userId and friendId
-router.route('/:userId/friends/:friendId').delete(removeFriend);
+// ./api/users/< userid>/friends/<userid>
+// Endpoint for adding a friend to a user and deleting a friend from a user
+router.route("/:userId/friends/:friendId").post(addFriend).delete(deleteFriend);
 
 module.exports = router;
